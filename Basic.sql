@@ -55,7 +55,7 @@ SELECT
   Address AS '주소'
 FROM Students;
 
--- All
+-- Example
 SELECT
   StudentID AS '아이디',
   StudentName AS '학생명',
