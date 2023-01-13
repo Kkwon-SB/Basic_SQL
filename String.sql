@@ -5,7 +5,6 @@ RIGHT	오른쪽부터 N글자
 TRIM	양쪽 공백 제거
 LTRIM	왼쪽 공백 제거
 RTRIM	오른쪽 공백 제거
-REPLACE(Q, A, B)	Q중 A를 B로 변경
 INSTR(Q, s)	Q중 s의 첫 위치 반환, 없을 시 0
 CAST(Q, T)	Q를 T 자료형으로 변환
 
@@ -45,7 +44,9 @@ SELECT
   LPAD('banana', 7, '-'); --> -banana
 
 
-
+REPLACE(Q, A, B) : Q중 A를 B로 변경
+SELECT
+  REPLACE('안녕하세요 좋은 하루 되세요.', '하루', '저녁'); --> 안녕하세요 좋은 저녁 되세요.
 
 
 
