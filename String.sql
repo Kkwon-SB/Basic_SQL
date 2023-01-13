@@ -5,8 +5,6 @@ RIGHT	오른쪽부터 N글자
 TRIM	양쪽 공백 제거
 LTRIM	왼쪽 공백 제거
 RTRIM	오른쪽 공백 제거
-LPAD(Q, N, P)	Q가 N글자가 될 때까지 P를 이어붙임
-RPAD(Q, N, P)	Q가 N글자가 될 때까지 P를 이어붙임
 REPLACE(Q, A, B)	Q중 A를 B로 변경
 INSTR(Q, s)	Q중 s의 첫 위치 반환, 없을 시 0
 CAST(Q, T)	Q를 T 자료형으로 변환
@@ -38,6 +36,13 @@ CHAR_LENGTH('apple'); -->> 5
 CHAR_LENGTH('안녕'),  -- 2
 
 
+LPAD(Q, N, P) : Q가 N글자가 될 때까지 P를 이어붙임
+RPAD(Q, N, P) : Q가 N글자가 될 때까지 P를 이어붙임
+SELECT
+  RPAD('car', 10, '+'), --> car+++++++
+  LPAD('car', 10, '+'), --> +++++++car
+  RPAD('banana', 7, '-'), --> banana-
+  LPAD('banana', 7, '-'); --> -banana
 
 
 
