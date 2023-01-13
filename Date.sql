@@ -1,0 +1,31 @@
+CURDATE	현재 날짜 반환
+CURTIME	현재 시간 반환
+NOW	현재 시간과 날짜 반환
+
+SELECT CURDATE(), CURTIME(), NOW();
+--> 2023-01-13	23:53:49	2023-01-13 23:53:49 
+
+
+DATE	문자열에 따라 날짜 생성 --> 2023-01-13 23:53:49 => 2023-01-13  
+TIME	문자열에 따라 시간 생성 --> 2023-01-13 23:53:49 => 23:53:49
+
+'''
+YEAR	주어진 DATETIME값의 년도 반환
+MONTHNAME	주어진 DATETIME값의 월(영문) 반환
+MONTH	주어진 DATETIME값의 월 반환
+WEEKDAY	주어진 DATETIME값의 요일값 반환(월요일: 0)
+DAYNAME	주어진 DATETIME값의 요일명 반환
+DAYOFMONTH, DAY	주어진 DATETIME값의 날짜(일) 반환
+'''
+SELECT
+  NOW(),
+  YEAR(NOW()) AS YEAR,
+  MONTHNAME(NOW()) AS MONTHNAME,
+  MONTH(NOW()) AS MONTH,
+  WEEKDAY(NOW()) AS WEEKDAY,
+  DAYNAME(NOW()) AS DAYNAME,
+  DAY(NOW()) AS DAY;
+
+--> 2023-01-13 23:56:56	2023	January	1	4	Friday	13
+
+
